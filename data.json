@@ -6,7 +6,7 @@
     "title": "The Art of Writing JSON",
     "tags": ["JSON", "Web Development", "Data", "Tutorial"],
     "reading_time": 10,
-    "publishDate": "2023-09-12T20:12:21Z"
+    "publish_date": "2023-09-12T20:12:21Z"
   },
   {
     "author_name": "Jane Smith",
@@ -15,7 +15,7 @@
     "title": "A Beginner's Guide to Programming",
     "tags": ["Programming", "Coding", "Software Development"],
     "reading_time": 15,
-    "publishDate": "2023-09-14T20:12:21Z"
+    "publish_date": "2023-09-14T20:12:21Z"
   },
   {
     "author_name": "Alice Johnson",
@@ -24,6 +24,6 @@
     "title": "Exploring the World: A Journey Through Europe",
     "tags": ["Travel", "Adventure", "Europe", "Wanderlust"],
     "reading_time": 20,
-    "publishDate": "2023-09-15T20:12:21Z"
+    "publish_date": "2023-09-15T20:12:21Z"
   }
 ]
