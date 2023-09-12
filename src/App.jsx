@@ -7,10 +7,10 @@ function App() {
   return (
     <>
       <Header></Header>
-      <div>
+      <main className="max-w-[80vw] mx-auto flex gap-5">
         <Blogs></Blogs>
         <Bookmarks></Bookmarks>
-      </div>
+      </main>
     </>
   );
 }
