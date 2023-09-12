@@ -1,24 +1,24 @@
 [
   {
     "author_name": "John Doe",
-    "author_img": "john_doe.jpg",
-    "banner_image": "article_banner.jpg",
+    "author_img": " https://i.ibb.co/fFSJLDY/boy1.png",
+    "banner_image": "https://i.ibb.co/7JbsZ3M/1.jpg",
     "title": "The Art of Writing JSON",
     "tags": ["JSON", "Web Development", "Data", "Tutorial"],
     "reading_time": 10
   },
   {
     "author_name": "Jane Smith",
-    "author_img": "jane_smith.jpg",
-    "banner_image": "coding_banner.jpg",
+    "author_img": "https://i.ibb.co/MRbvq62/boy2.jpg",
+    "banner_image": " https://i.ibb.co/kQdSRZj/2.png",
     "title": "A Beginner's Guide to Programming",
     "tags": ["Programming", "Coding", "Software Development"],
     "reading_time": 15
   },
   {
     "author_name": "Alice Johnson",
-    "author_img": "alice_johnson.jpg",
-    "banner_image": "travel_banner.jpg",
+    "author_img": "https://i.ibb.co/YWZ09bj/girl1.jpg",
+    "banner_image": "https://i.ibb.co/88hKChx/3.png",
     "title": "Exploring the World: A Journey Through Europe",
     "tags": ["Travel", "Adventure", "Europe", "Wanderlust"],
     "reading_time": 20
