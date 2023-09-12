@@ -14,10 +14,9 @@ const Blogs = () => {
   return (
     <>
       <div className="lg:w-2/3">
-        Blogs : {blog.length}
-        {
-            blog.map((blog,index)=><Blog key={index} blog={blog}></Blog>)
-        }
+        {blog.map((blog, index) => (
+          <Blog key={index} blog={blog}></Blog>
+        ))}
       </div>
     </>
   );
