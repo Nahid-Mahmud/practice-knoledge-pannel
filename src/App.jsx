@@ -2,14 +2,20 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Blogs from "./Components/Blogs/Blogs";
 import Bookmarks from "./Components/Bookmarks/Bookmarks";
+import { useState } from "react";
 
 function App() {
+  const [bookmarks, setBookmarks] = useState([]);
+  const handleBookmarks = (blog) => {
+    const newbookmarks = [...bookmarks, blog];
+    setBookmarks(newbookmarks);
+  };
   return (
     <>
       <Header></Header>
       <main className="max-w-[80vw] mx-auto flex gap-5">
-        <Blogs></Blogs>
-        <Bookmarks></Bookmarks>
+        <Blogs handleBookmarks={handleBookmarks}></Blogs>
+        <Bookmarks bookmarks={bookmarks}></Bookmarks>
       </main>
     </>
   );

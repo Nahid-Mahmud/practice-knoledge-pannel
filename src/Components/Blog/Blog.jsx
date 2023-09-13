@@ -1,18 +1,25 @@
 import PropTypes from "prop-types";
-const Blog = ({ blog }) => {
-  console.log(blog);
-  const { author_name, author_img, banner_image, title, tags, reading_time } =
-    blog;
+const Blog = ({ blog, handleBookmarks }) => {
+  const {
+    author_name,
+    author_img,
+    banner_image,
+    title,
+    tags,
+    reading_time,
+    publish_date,
+  } = blog;
   return (
-    <div>
+    <div className="max-w-[80%] mx-auto">
       <img src={banner_image} alt="" />
-      <div>
-        <div>
+      <div className="flex justify-between my-4">
+        <div className="flex gap-4">
           <div>
-            <img src={author_img} alt="" />
+            <img className="w-14" src={author_img} alt="" />
           </div>
           <div>
             <p>{author_name}</p>
+            <p>{publish_date}</p>
           </div>
         </div>
         <div className="flex">
@@ -21,6 +28,8 @@ const Blog = ({ blog }) => {
           </div>
           <div>
             <svg
+              onClick={() => handleBookmarks(blog)}
+              className="cursor-pointer"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -39,7 +48,13 @@ const Blog = ({ blog }) => {
           </div>
         </div>
       </div>
-      <p>{blog.title}</p>
+      <p>{title}</p>
+      <div className="flex gap-3">
+        {tags.map((tag, index) => {
+          return <p key={index}>#{tag}</p>;
+        })}
+      </div>
+      <button className="text-blue-700 ">Mark As Read</button>
     </div>
   );
 };
