@@ -9,6 +9,7 @@ const Blog = ({ blog, handleBookmarks, handleMarkAsRead }) => {
     tags,
     reading_time,
     publish_date,
+    id,
   } = blog;
   return (
     <div className="max-w-[80%] mx-auto">
@@ -56,11 +57,15 @@ const Blog = ({ blog, handleBookmarks, handleMarkAsRead }) => {
       <p className="font-bold text-4xl text-black">{title}</p>
       <div className="flex gap-1 flex-wrap">
         {tags.map((tag, index) => {
-          return <p className="font-medium text-slate-400 text-xl" key={index}>#{tag}</p>;
+          return (
+            <p className="font-medium text-slate-400 text-xl" key={index}>
+              #{tag}
+            </p>
+          );
         })}
       </div>
       <button
-        onClick={() => handleMarkAsRead(reading_time)}
+        onClick={() => handleMarkAsRead(reading_time, id)}
         className="text-blue-700 mark-as-read text-xl"
       >
         Mark As Read
