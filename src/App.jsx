@@ -8,6 +8,9 @@ import { useState } from "react";
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
   const handleBookmarks = (blog) => {
+    const isExist = bookmarks.find((e) => e.id == blog.id);
+    if (isExist) return;
+    console.log(isExist);
     const newbookmarks = [...bookmarks, blog];
     setBookmarks(newbookmarks);
   };
