@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-const Blog = ({ blog, handleBookmarks }) => {
+import "./blog.css";
+const Blog = ({ blog, handleBookmarks, handleMarkAsRead }) => {
   const {
     author_name,
     author_img,
@@ -18,13 +19,17 @@ const Blog = ({ blog, handleBookmarks }) => {
             <img className="w-14" src={author_img} alt="" />
           </div>
           <div>
-            <p>{author_name}</p>
-            <p>{publish_date}</p>
+            <p className="text-xl font-bold text-black">{author_name}</p>
+            <p className="text-base font-semibold text-slate-400">
+              {publish_date}
+            </p>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex gap-2 items-center">
           <div>
-            <p>{reading_time} min read</p>
+            <p className="text-slate-400 font-medium text-xl">
+              {reading_time} min read
+            </p>
           </div>
           <div>
             <svg
@@ -48,13 +53,18 @@ const Blog = ({ blog, handleBookmarks }) => {
           </div>
         </div>
       </div>
-      <p>{title}</p>
-      <div className="flex gap-3">
+      <p className="font-bold text-4xl text-black">{title}</p>
+      <div className="flex gap-1 flex-wrap">
         {tags.map((tag, index) => {
-          return <p key={index}>#{tag}</p>;
+          return <p className="font-medium text-slate-400 text-xl" key={index}>#{tag}</p>;
         })}
       </div>
-      <button className="text-blue-700 ">Mark As Read</button>
+      <button
+        onClick={() => handleMarkAsRead(reading_time)}
+        className="text-blue-700 mark-as-read text-xl"
+      >
+        Mark As Read
+      </button>
     </div>
   );
 };

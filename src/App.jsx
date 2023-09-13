@@ -4,18 +4,32 @@ import Blogs from "./Components/Blogs/Blogs";
 import Bookmarks from "./Components/Bookmarks/Bookmarks";
 import { useState } from "react";
 
+//function for bookmark icon
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
   const handleBookmarks = (blog) => {
     const newbookmarks = [...bookmarks, blog];
     setBookmarks(newbookmarks);
   };
+
+  //function for mark as read button
+
+  const [time, setTime] = useState(0);
+
+  const handleMarkAsRead = (reading_time) => {
+    const newReadingTime = time + reading_time;
+    setTime(newReadingTime);
+  };
+  console.log(time);
   return (
     <>
       <Header></Header>
-      <main className="max-w-[80vw] mx-auto flex gap-5">
-        <Blogs handleBookmarks={handleBookmarks}></Blogs>
-        <Bookmarks bookmarks={bookmarks}></Bookmarks>
+      <main className="max-w-[80vw] mx-auto flex flex-col lg:flex-row gap-5 ">
+        <Blogs
+          handleMarkAsRead={handleMarkAsRead}
+          handleBookmarks={handleBookmarks}
+        ></Blogs>
+        <Bookmarks time={time} bookmarks={bookmarks}></Bookmarks>
       </main>
     </>
   );
