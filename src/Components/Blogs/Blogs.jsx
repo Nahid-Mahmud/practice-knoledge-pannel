@@ -5,9 +5,7 @@ import Blog from "../Blog/Blog";
 const Blogs = ({ handleBookmarks, handleMarkAsRead }) => {
   const [blog, setBlogs] = useState([]);
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Nahid-Mahmud/practice-knoledge-pannel/main/data.json"
-    )
+    fetch("data.json")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
